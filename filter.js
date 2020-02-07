@@ -1,3 +1,8 @@
+// const numbers = [1, 2, 3, 4, 5];
+// const rta = numbers.filter(item => item % 2 !== 0);
+// console.log(numbers, rta);
+
+
 const tasks = [
   {
     title: 'Fix issue 423',
@@ -12,12 +17,12 @@ const tasks = [
   {
     title: 'Show validations in form',
     duration: 180,
-    completed: true,
+    completed: false,
   },
   {
     title: 'Make new endpoint for login',
     duration: 240,
-    completed: false,
+    completed: true,
   },
 ];
 
@@ -25,11 +30,9 @@ const rta = tasks
 .map(task => {
   return {
     ...task,
-    durationInHours: task.duration / 60,
+    durationInHours: task.duration / 60
   };
 })
-.filter(task => task.completed)
-.reduce((count, task) => {
-  return count + task.durationInHours;
-}, 0)
+.filter(task => task.durationInHours > 2 && task.completed)
+
 console.log(rta);

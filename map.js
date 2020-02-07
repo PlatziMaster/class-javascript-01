@@ -1,8 +1,5 @@
 // const numbers = [1, 2, 3, 4, 5];
-// const rta = numbers.map(function (item) {
-//   return item * 2;
-// });
-
+// const rta = numbers.map(item => true);
 // console.log(numbers, rta);
 
 const tasks = [
@@ -31,9 +28,9 @@ const tasks = [
 const rta = tasks.map(task => {
   return {
     ...task,
-    durationInHours: task.duration / 60,
+    durationInHours: task.duration / 60
   };
-});
+})
 console.log(tasks);
-console.log('------------');
+console.log('-----------');
 console.log(rta);
